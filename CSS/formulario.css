@@ -3,8 +3,7 @@
 .contact_form{  
   width: 100%; 
   height: auto;
-  margin: 10px auto;
-  border-radius: 10px;  
+  margin: 3px auto;
   padding-top: 30px;
   padding-bottom: 20px;  
   background-color: #fbfbfb; 
@@ -123,3 +122,14 @@ span{
   outline:0;
   border: 1px solid rgb(80, 80, 80);;
 }
+
+@media screen and (max-width: 992px) {
+  .swal2-popup {
+    width: 20em;
+    font-size: 12px;
+  }
+  button.swal2-confirm.swal2-styled {
+    width: 200px;
+}
+}
+

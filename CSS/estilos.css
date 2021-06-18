@@ -36,6 +36,7 @@ h1,h2,h3 {
 }
 section article h2, section article p{
     margin-left: 30px;
+    margin-right: 30px;
     }
     section aside h3, section aside p{
         margin-left: 10px;
@@ -196,4 +197,26 @@ footer p{
 button.swal2-confirm.swal2-styled {
     background: #337ab7;
 }
+
+@media screen and (max-width: 992px) {
+    header {
+      background: rgb(80, 80, 80);
+      color: rgb(230, 233, 235);
+    }
+    article img {
+        height: 200px !important;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+    html, body{
+        height: 93%;
+    }
+  }
 
