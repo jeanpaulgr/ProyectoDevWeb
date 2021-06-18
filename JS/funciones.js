@@ -74,7 +74,7 @@ function getGET()
 
 let getPlanes = () =>{
 console.log("getPlanes");
-readTextFile("../Assets/Data/planes.json", function(text){
+readTextFile("./Assets/Data/planes.json", function(text){
     let data = JSON.parse(text);
     let planes = data.planes
     let seccionArticulos = document.getElementById("seccionArticulos")
@@ -102,7 +102,7 @@ readTextFile("../Assets/Data/planes.json", function(text){
 
 let getArticulos= () =>{
 console.log("getArticulos");
-readTextFile("../Assets/Data/articulos.json", function(text){
+readTextFile("./Assets/Data/articulos.json", function(text){
     let data = JSON.parse(text);
     let articulos = data.articulos
     let seccionArticulos = document.getElementById("seccionArticulos")
