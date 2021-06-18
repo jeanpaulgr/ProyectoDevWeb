@@ -16,12 +16,22 @@ window.onload = function() {
         if(tipo == 3){
             getCotizaciones()
         }else{
-            if(tipo == 1){
-            getArticulos()    
+            if(tipo == 4){
+            getNoticias()    
             }else{
             getArticulos()    
             } 
         }
+    }
+
+    if(tipo != 4){
+        let asideId = document.getElementById("asideId")
+        asideId.innerHTML = ""
+        asideId.innerHTML += "<h3>Ventajas</h3>"
+        asideId.innerHTML += "<p>Mantén las fichas de tus pacientes en un solo lugar, de forma segura y ordenada.</p>"
+        asideId.innerHTML += "<p>No pierdas tu tiempo con soluciones complejas. Empieza a usar Historia Clínica en solo minutos</p>"
+        asideId.innerHTML += "<p>Porque no todos tienen las mismas necesidades, tenemos una ficha médica distinta para cada especialidad</p>"
+        asideId.innerHTML += "<p>Adjunta documentos y exámenes de tus pacientes para llevar su seguimiento</p>"
     }
     
     
@@ -79,6 +89,14 @@ readTextFile("../Assets/Data/planes.json", function(text){
 
     });
     seccionArticulos.innerHTML = cuerpo
+    let asideId = document.getElementById("asideId")
+    asideId.innerHTML = ""
+    asideId.innerHTML += "<h3>Ventajas</h3>"
+    asideId.innerHTML += "<p>Mantén las fichas de tus pacientes en un solo lugar, de forma segura y ordenada.</p>"
+    asideId.innerHTML += "<p>No pierdas tu tiempo con soluciones complejas. Empieza a usar Historia Clínica en solo minutos</p>"
+    asideId.innerHTML += "<p>Porque no todos tienen las mismas necesidades, tenemos una ficha médica distinta para cada especialidad</p>"
+    asideId.innerHTML += "<p>Adjunta documentos y exámenes de tus pacientes para llevar su seguimiento</p>"
+
 });
 }
 
@@ -99,6 +117,15 @@ readTextFile("../Assets/Data/articulos.json", function(text){
 
     });
     seccionArticulos.innerHTML = cuerpo
+
+    let asideId = document.getElementById("asideId")
+    asideId.innerHTML = ""
+    asideId.innerHTML += "<h3>Ventajas</h3>"
+    asideId.innerHTML += "<p>Mantén las fichas de tus pacientes en un solo lugar, de forma segura y ordenada.</p>"
+    asideId.innerHTML += "<p>No pierdas tu tiempo con soluciones complejas. Empieza a usar Historia Clínica en solo minutos</p>"
+    asideId.innerHTML += "<p>Porque no todos tienen las mismas necesidades, tenemos una ficha médica distinta para cada especialidad</p>"
+    asideId.innerHTML += "<p>Adjunta documentos y exámenes de tus pacientes para llevar su seguimiento</p>"
+
 });
 }
 
@@ -125,6 +152,98 @@ let getCotizaciones= () =>{
           cotizacionesId.innerHTML = cuerpo
         }
     }
+        const getNoticias = () => {
+        let api = 'https://corona.lmao.ninja/v3/covid-19/all'
+        
+        fetch(api,{
+            method: 'GET',
+            mode: 'cors',
+            credentials : 'same-origin',
+	        headers: {
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Headers" : "Content-Type",
+                "Access-Control-Allow-Origin": "http://127.0.0.1:5500/",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+        	},
+            referrerPolicy: 'no-referrer',
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                  console.log('noticias', data.cases);
+                  let seccionArticulos = document.getElementById("seccionArticulos")
+                  let cuerpo = "<article><h2>CORONAVIRUS EN EL MUNDO</h1></article>";
+                  
+                  cuerpo += "<article><h2>Casos Totales</h2>"
+                  cuerpo += "<p>"+ data.cases +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Casos Hoy</h2>"
+                  cuerpo += "<p>"+ data.todayCases +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Muertes Totales</h2>"
+                  cuerpo += "<p>"+ data.deaths +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Muertes Hoy</h2>"
+                  cuerpo += "<p>"+ data.todayDeaths +"</p>"
+                  cuerpo += "</article>"
+                  
+                  cuerpo += "<article><h2>Total Recuperados</h2>"
+                  cuerpo += "<p>"+ data.recovered +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Recuperados Hoy</h2>"
+                  cuerpo += "<p>"+ data.todayRecovered +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Casos Activos</h2>"
+                  cuerpo += "<p>"+ data.active +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Casos Críticos</h2>"
+                  cuerpo += "<p>"+ data.critical +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Casos Por Millón</h2>"
+                  cuerpo += "<p>"+ data.casesPerOneMillion +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Muertes Por Millón</h2>"
+                  cuerpo += "<p>"+ data.deathsPerOneMillion +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Vacunados</h2>"
+                  cuerpo += "<p>"+ data.tests +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Vacunados por Millón</h2>"
+                  cuerpo += "<p>"+ data.testsPerOneMillion +"</p>"
+                  cuerpo += "</article>"
+
+                  cuerpo += "<article><h2>Países Afectados</h2>"
+                  cuerpo += "<p>"+ data.affectedCountries +"</p>"
+                  cuerpo += "</article>"
+
+                  seccionArticulos.innerHTML = cuerpo
+
+                  let asideId = document.getElementById("asideId")
+          
+                  cuerpo = "<h3>Resúmen</h3>"
+                  cuerpo += "<p><b>Países Afectados</b></br>"
+                  cuerpo += ""+ data.affectedCountries+"</p>"
+                  cuerpo += "<p><b>Casos Totales</b></br>"
+                  cuerpo += ""+ data.cases +"</p>"
+                  cuerpo += "<p><b>Muertes Totales</b></br>"
+                  cuerpo += ""+ data.deaths +"</p>"
+                  cuerpo += "<p><b>Recuperados Totales</b></br>"
+                  cuerpo += ""+ data.recovered +"</p>"
+                  asideId.innerHTML = cuerpo
+                })
+            .catch((err) => console.log(err));
+        };
+       
+      
 let onClick_enviarCotizacion = (e) =>{
   //Cargar Archivos ya existentes
   let dataStorage = localStorage["cotizaciones"]
@@ -134,7 +253,6 @@ let onClick_enviarCotizacion = (e) =>{
   }
 
   let data = JSON.parse(dataStorage);
-    // console.log("data", data)
     //VALIDAR
     let nombre = document.getElementById("txtNombre").value
     let email = document.getElementById("txtEmail").value

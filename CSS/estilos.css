@@ -218,5 +218,11 @@ button.swal2-confirm.swal2-styled {
     html, body{
         height: 93%;
     }
+    .nav-der a{
+        font-size: 12px;
+    }
+    .nav-der a.button{
+        min-width: 60px;
+    }
   }
 
