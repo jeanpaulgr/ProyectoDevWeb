@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Titulo de la web| Menos de 55 caracteres</title>
+<meta charset="utf-8" />
+<meta name="description" content="Debe contener las palabras clave, tratar de atraer clicks y de longitud entre 150 y 160 caracteres">
+<link rel="stylesheet" href="../CSS/estilos.css" />
+<link rel="stylesheet" href="../CSS/formulario.css" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../JS/funciones.js"></script>
+
+</head>
+ 
+<body>
+
+    <nav>
+        <div class="nav-izq">
+            <b>MEDICAL UI </b>| Registro Clínico
+        </div>
+        <div class="nav-der">
+    
+            <a class="button" href="/index.html?tipo=1">Inicio</a>
+            <a class="button" href="/index.html?tipo=2"">Planes</a>
+            <a class="button">Cotizar</a>
+            <a class="button"href="https://almanake-fichaclinica.azurewebsites.net/">Iniciar Sesión</a>
+        </div>
+    </nav>
+    <header>
+       <h1>Medical UI</h1>
+       <p>Software Registro Médico</p>
+       
+    </header>
+    <div class="contenido">
+        <section style="width: 100%;"">
+             <div class=" contacto contact_form">
+
+                <div class="formulario">      
+                  <h1>Formulario de cotización</h1>
+                    <h3>Escríbenos y en breve nos pondremos en contacto</h3>
+                        <form>       
+                            <p>
+                              <label for="nombre" class="colocar_nombre">Nombre
+                                <span class="obligatorio">*</span>
+                              </label>
+                                <input type="text" name="introducir_nombre" id="txtNombre" required="obligatorio" placeholder="Escribe tu nombre">
+                            </p>
+                          
+                            <p>
+                              <label for="email" class="colocar_email">Email
+                                <span class="obligatorio">*</span>
+                              </label>
+                                <input type="email" name="introducir_email" id="txtEmail" required="obligatorio" placeholder="Escribe tu Email">
+                            </p>
+                        
+                            <p>
+                              <label for="telefone" class="colocar_telefono">Teléfono
+                              </label>
+                                <input type="tel" name="introducir_telefono" id="txtTelefono" placeholder="Escribe tu teléfono">
+                            </p>    
+                         
+                            <p>
+                              <label for="asunto" class="colocar_asunto">Asunto
+                                <span class="obligatorio">*</span>
+                              </label>
+                                <input type="text" name="introducir_asunto" id="txtAsunto" required="obligatorio" placeholder="Escribe un asunto">
+                            </p>    
+                          
+                            <p>
+                              <label for="mensaje" class="colocar_mensaje">Mensaje
+                                <span class="obligatorio">*</span>
+                              </label>                     
+                                                <textarea name="introducir_mensaje" class="texto_mensaje" id="txtMensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                            </p>                    
+                          
+                            <button type="button" name="enviar_formulario" id="enviarCotizacion" onclick="onClick_enviarCotizacion()"><p>Enviar</p></button>
+            
+                            <p class="aviso">
+                              <span class="obligatorio"> * </span>los campos son obligatorios.
+                            </p>          
+                        
+                      </form>
+                </div>  
+              </div>
+            
+      </section>
+    <aside>
+        <h3>Mis Cotizaciones</h3>
+        <div id="cotizacionesId">
+        </div> 
+    </aside>
+    </div>
+    
+    <footer>
+        <p>Proyecto Web Escalab 2021. <b>Jean González R.</b></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Titulo de la web| Menos de 55 caracteres</title>
+<meta charset="utf-8" />
+<meta name="description" content="Debe contener las palabras clave, tratar de atraer clicks y de longitud entre 150 y 160 caracteres">
+<link rel="stylesheet" href="./CSS/estilos.css" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script src="Assets/Data/articulos.json" language="Javascript"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="JS/funciones.js"></script>
+</head>
+ 
+<body>
+
+    <nav>
+        <div class="nav-izq">
+            <b>MEDICAL UI </b>| Registro Clínico
+        </div>
+        <div class="nav-der">
+    
+            <a class="button" onclick="getArticulos()">Inicio</a>
+            <a class="button" onclick="getPlanes()">Planes</a>
+            <a class="button" href="./Pages/cotizar.html?tipo=3">Cotizar</a>
+            <a class="button"href="https://almanake-fichaclinica.azurewebsites.net/">Iniciar Sesión</a>
+        </div>
+    </nav>
+    <header>
+       <h1>Medical UI</h1>
+       <p>Software Registro Médico</p>
+       
+    </header>
+    <div class="contenido">
+      <section id="seccionArticulos"></section>
+    <aside>
+        <h3>Ventajas</h3>
+            <p>Mantén las fichas de tus pacientes en un solo lugar, de forma segura y ordenada.</p>
+            <p>No pierdas tu tiempo con soluciones complejas. Empieza a usar Historia Clínica en solo minutos</p>
+            <p>Porque no todos tienen las mismas necesidades, tenemos una ficha médica distinta para cada especialidad</p>
+            <p>Adjunta documentos y exámenes de tus pacientes para llevar su seguimiento</p>
+     </aside>
+    </div>
+    
+    <footer>
+        <p>Proyecto Web Escalab 2021. <b>Jean González R.</b></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+     "planes":[
+      {
+        "titulo": "PLAN PERSONAL | <b style='font-weight: 400;'>GRATIS</b>",
+        "subtitulo":"• 1 cuenta de profesional <br>• Hasta 20 pacientes <br>• Ficha estándar según profesiones disponibles <br>• Almacenamiento de archivos(2 GB)<br>• Impresión de preescripciones (1 mes) <br>• Agenda Online (1 mes)",
+        "imagen": "./Assets/Images/Plan1.png"
+      },
+      {
+        "titulo": "PLAN PERSONAL PREMIUM | <b style='font-weight: 400;'>$20.000</b>",
+        "subtitulo":"• 1 cuenta de profesional <br>• 1 cuenta de administración <br>• Pacientes ilimitados <br>• Ficha estándar según tu profesión <br>• Almacenamiento de archivos(25 GB)<br>• Impresión de preescripciones<br>• Agenda Online",
+        "imagen": "./Assets/Images/Plan2.png"
+      },
+      {
+        "titulo": "PLAN CENTRO MÉDICO | <b style='font-weight: 400;'>COTIZAR</b>",
+        "subtitulo":"• Nº de cuentas profesionales y administrativas según requerimientos <br>• Pacientes ilimitados <br>• Ficha personalizable según requerimiento del centro médico <br>• Almacenamiento de archivos(ilimitado)<br>• Impresión de preescripciones<br>• Agenda Online",
+        "imagen": "./Assets/Images/Plan3.png"
+      }
+    ]
+
+}

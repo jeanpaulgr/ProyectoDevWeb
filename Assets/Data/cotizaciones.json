@@ -1,0 +1,12 @@
+{
+    "cotizaciones":[
+     {
+       "nombre": "Jean González",
+       "email":"jeanpaulgr@gmail.com",
+       "telefono": "9999999",
+       "asunto": "Quiero Cotizar",
+       "mensaje": "Hola, me gustaría cotizar un Plan Personal..."
+     }
+   ]
+
+}
